@@ -200,6 +200,29 @@ Component({
       }
     },
 
+    imgError (e) {
+      const { i } = e.currentTarget.dataset;
+
+      const idArr = i.split("_");
+
+      let temp = this.data.childs;
+
+      idArr.forEach((item) => {
+        temp = Array.isArray(temp) ? temp[item] : temp.children[item];
+      });
+      const src = temp.attrs.src;
+
+      if (src) {
+        temp.attrs.src =
+          src.indexOf("https://images.weserv.nl/?url=") === -1
+            ? "https://images.weserv.nl/?url=" + src
+            : src;
+        this.setData({
+          childs: [...this.data.childs]
+        })
+      }
+    },
+
     /**
      * @description 错误事件
      * @param {Event} e

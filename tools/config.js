@@ -10,13 +10,13 @@ module.exports = {
     // 'audio',     // 音乐播放器
     // 'editable',  // 内容编辑
     // 'emoji',     // 小表情
-    // 'highlight', // 代码高亮
-    // 'markdown',  // 解析 md
-    // 'latex',     // 解析 latex
+    "highlight", // 代码高亮
+    "markdown", // 解析 md
+    "latex", // 解析 latex
     // 'search',    // 关键词搜索
     // 'style',     // 解析 style 标签
     // 'txv-video', // 使用腾讯视频
-    // 'img-cache'  // 图片缓存
+    "img-cache", // 图片缓存
     // 'card',      // 卡片展示
   ],
 
@@ -24,7 +24,7 @@ module.exports = {
    * @description 要引入到组件中的外部样式（css）
    * 仅支持标签名和 class 选择器
    */
-  externStyle: '',
+  externStyle: "",
 
   /**
    * @description 要引入到模板中的自定义标签（ad 等）
@@ -45,7 +45,7 @@ module.exports = {
    * @tutorial https://babeljs.io/docs/usage/options/
    */
   babel: {
-    presets: ['@babel/env']
+    presets: ["@babel/env"],
   },
 
   /**
@@ -54,11 +54,11 @@ module.exports = {
    */
   uglify: {
     mangle: {
-      toplevel: true
+      toplevel: true,
     },
     output: {
-      comments: /^!/
-    }
+      comments: /^!/,
+    },
   },
 
   /**
@@ -69,14 +69,12 @@ module.exports = {
     caseSensitive: true,
     collapseWhitespace: true,
     removeComments: true,
-    keepClosingSlash: true
+    keepClosingSlash: true,
   },
 
   /**
    * @description css 压缩配置
    * @tutorial https://github.com/jakubpawlowicz/clean-css#constructor-options
    */
-  cleanCss: {
-
-  }
-}
+  cleanCss: {},
+};
